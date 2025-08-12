@@ -158,10 +158,9 @@
         <div class="container mx-auto px-4 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <img src="../convene-logo.png" 
-                         alt="Convene Market Logo" 
-                         class="h-8 w-auto" 
-                         loading="eager">
+                    <span class="font-poppins font-bold text-xl text-[color:var(--cm-blue)]">
+                        Convene Market
+                    </span>
                 </div>
                 <button onclick="scrollToForm()" 
                         class="bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-4 py-2 rounded-full font-medium hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
@@ -178,10 +177,9 @@
                 <!-- Hero Content -->
                 <div class="fade-in-up">
                     <div class="mb-6">
-                        <img src="../convene-logo.png" 
-                             alt="Convene Market" 
-                             class="h-12 w-auto mb-8"
-                             loading="eager">
+                        <div class="font-poppins font-bold text-3xl text-[color:var(--cm-blue)] mb-8">
+                            Convene Market
+                        </div>
                     </div>
                     <h1 class="font-poppins font-bold text-4xl lg:text-6xl text-[color:var(--cm-charcoal)] mb-6 leading-tight">
                         Out with the Old. In with the Smart.
@@ -207,8 +205,8 @@
                             <p class="text-sm text-gray-500 mt-2">Before</p>
                         </div>
                         <div class="text-center">
-                            <img src="assets/images/2Machines.webp" 
-                                 alt="Sleek Sandstar smart coolers with modern design and premium products" 
+                            <img src="assets/images/convene-coolers.png" 
+                                 alt="Sleek Convene smart coolers with modern design and premium products" 
                                  class="w-full rounded-lg shadow-md"
                                  loading="lazy"
                                  decoding="async">
@@ -232,36 +230,119 @@
     <!-- Problem Section -->
     <section class="bg-[color:var(--cm-gray)] py-16 lg:py-24">
         <div class="container mx-auto px-4 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center fade-in-up">
-                <h2 class="font-poppins font-bold text-3xl lg:text-5xl text-[color:var(--cm-charcoal)] mb-12">
-                    Why Outdated Vending Machines Drag Your Space Down
-                </h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-sm">
-                        <div class="text-red-500 text-4xl mb-4">🔧</div>
-                        <p class="text-lg text-gray-700">Machines break often — frustration for staff/customers.</p>
+            <div class="max-w-6xl mx-auto fade-in-up">
+                <div class="text-center mb-16">
+                    <h2 class="font-poppins font-bold text-3xl lg:text-5xl text-[color:var(--cm-charcoal)] mb-6">
+                        A Week in the Life of Outdated Vending
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Your team's daily frustration with broken, empty, and unreliable machines is costing more than just money.
+                    </p>
+                </div>
+                
+                <!-- Story Timeline -->
+                <div class="space-y-8">
+                    <!-- Monday -->
+                    <div class="grid lg:grid-cols-2 gap-8 items-center bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div class="p-8 lg:p-12">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                    Monday
+                                </div>
+                                <span class="text-2xl">😤</span>
+                            </div>
+                            <h3 class="font-poppins font-bold text-2xl text-[color:var(--cm-charcoal)] mb-4">
+                                "The machine ate my money... again"
+                            </h3>
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                Sarah inserts $2 for a drink. The machine takes her money but nothing happens. She tries the coin return — nothing. She bangs on the glass. Still nothing. Her afternoon is ruined before it started.
+                            </p>
+                        </div>
+                        <div class="lg:h-80">
+                            <img src="assets/images/out-of-order.jpg" 
+                                 alt="Vending machine with out of order sign showing common breakdown issues" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-sm">
-                        <div class="text-red-500 text-4xl mb-4">🥱</div>
-                        <p class="text-lg text-gray-700">Same stale snacks for years.</p>
+                    
+                    <!-- Wednesday -->
+                    <div class="grid lg:grid-cols-2 gap-8 items-center bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div class="lg:h-80 order-2 lg:order-1">
+                            <img src="assets/images/almost-empty.jpg" 
+                                 alt="Nearly empty vending machine with limited selection and poor stocking" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                        <div class="p-8 lg:p-12 order-1 lg:order-2">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                    Wednesday
+                                </div>
+                                <span class="text-2xl">😞</span>
+                            </div>
+                            <h3 class="font-poppins font-bold text-2xl text-[color:var(--cm-charcoal)] mb-4">
+                                "Everything I want is sold out"
+                            </h3>
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                Mike walks to the break room hoping for his usual energy drink. The machine is nearly empty — just some stale chips from 2019 and warm soda. The good stuff disappeared on Monday and won't be restocked until next week.
+                            </p>
+                        </div>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-sm">
-                        <div class="text-red-500 text-4xl mb-4">💳</div>
-                        <p class="text-lg text-gray-700">Limited payment options.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-sm md:col-span-2 lg:col-span-1">
-                        <div class="text-red-500 text-4xl mb-4">👎</div>
-                        <p class="text-lg text-gray-700">Ugly, outdated look that clashes with your space.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-sm md:col-span-2 lg:col-span-2">
-                        <div class="text-red-500 text-4xl mb-4">❌</div>
-                        <p class="text-lg text-gray-700">No customization for your people.</p>
+                    
+                    <!-- Friday -->
+                    <div class="grid lg:grid-cols-2 gap-8 items-center bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div class="p-8 lg:p-12">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                    Friday
+                                </div>
+                                <span class="text-2xl">🤷‍♀️</span>
+                            </div>
+                            <h3 class="font-poppins font-bold text-2xl text-[color:var(--cm-charcoal)] mb-4">
+                                "I just stopped trying"
+                            </h3>
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                Lisa used to use the vending machine daily. But after months of broken card readers, jammed bills, and disappointing selections, she's given up entirely. Now she drives to the store instead — a 20-minute round trip that kills her productivity.
+                            </p>
+                        </div>
+                        <div class="lg:h-80">
+                            <img src="assets/images/old-vending-machines.jpg" 
+                                 alt="Old traditional vending machines showing outdated technology and poor user experience" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
                     </div>
                 </div>
-                <div class="mt-12">
+                
+                <!-- Impact Summary -->
+                <div class="bg-red-50 border border-red-200 rounded-2xl p-8 mt-12 text-center">
+                    <h3 class="font-poppins font-bold text-xl text-red-800 mb-4">
+                        The Real Cost of Outdated Vending
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-6 text-red-700">
+                        <div>
+                            <div class="text-2xl font-bold">73%</div>
+                            <div class="text-sm">of employees avoid the machines</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold">$2,400</div>
+                            <div class="text-sm">average annual maintenance</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold">20 min</div>
+                            <div class="text-sm">wasted per frustrated employee</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
                     <button onclick="scrollToForm()" 
                             class="bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Get Your Smart Upgrade
+                        End the Frustration — Get Smart Vending
                     </button>
                 </div>
             </div>
@@ -301,7 +382,7 @@
                             </div>
                             
                             <div class="text-center">
-                                <img src="assets/images/nex-tv-new-vending.png" 
+                                <img src="assets/images/new-tv-new-vending.png" 
                                      alt="Modern sales approach with smart 4K display and AI-powered smart cooler" 
                                      class="w-full max-w-md mx-auto rounded-xl shadow-lg mb-4"
                                      loading="lazy"
@@ -335,7 +416,6 @@
                             <video 
                                 class="w-full h-auto" 
                                 controls 
-                                poster="assets/images/2Machines.webp"
                                 preload="metadata">
                                 <source src="assets/videos/convene-market-demo.mp4" type="video/mp4">
                                 <p class="text-white p-8">Your browser doesn't support video playback. 
