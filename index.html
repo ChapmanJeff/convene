@@ -644,7 +644,7 @@
                 <div class="mt-12">
                     <button onclick="scrollToForm()" 
                             class="bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Join Happy Customers
+                        Request Your Free Smart Cooler
                     </button>
                 </div>
             </div>
@@ -663,34 +663,77 @@
                 </p>
                 
                 <!-- Customer Logos -->
-                <div class="mb-16 overflow-hidden">
-                    <div id="logoCarousel" class="flex gap-8 transition-transform duration-1000 ease-linear">
-                        <img src="assets/images/customer_logos/1.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/2.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/3.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/4.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/5.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/6.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/7.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/8.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/9.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/10.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/11.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/12.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/13.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/14.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/15.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/16.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/17.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/18.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/19.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/20.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/21.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/22.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/23.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
-                        <img src="assets/images/customer_logos/24.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                <div class="mb-16">
+                    <!-- Carousel View -->
+                    <div id="logoCarouselContainer" class="overflow-hidden">
+                        <div id="logoCarousel" class="flex gap-8 transition-transform duration-1000 ease-linear">
+                            <img src="assets/images/customer_logos/1.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/2.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/3.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/4.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/5.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/6.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/7.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/8.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/9.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/10.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/11.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/12.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/13.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/14.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/15.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/16.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/17.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/18.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/19.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/20.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/21.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/22.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/23.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/24.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                        </div>
+                    </div>
+
+                    <!-- Grid View (Hidden by default) -->
+                    <div id="logoGrid" class="hidden grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 items-center justify-items-center">
+                        <img src="assets/images/customer_logos/1.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/2.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/3.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/4.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/5.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/6.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/7.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/8.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/9.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/10.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/11.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/12.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/13.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/14.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/15.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/16.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/17.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/18.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/19.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/20.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/21.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/22.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/23.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/24.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                    </div>
+
+                    <!-- Toggle Button -->
+                    <div class="text-center mt-6">
+                        <button id="toggleViewBtn" onclick="toggleLogoView()" class="text-gray-400 hover:text-gray-600 text-xs font-light underline underline-offset-2 transition-colors duration-200">
+                            See all logos
+                        </button>
                     </div>
                 </div>
+                
+                <p class="text-xl text-gray-600 text-center mb-12">
+                    From corporate offices to sports clubs, Convene will transform your space
+                </p>
+                
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                         <img src="assets/images/Office Pantry.webp" 
@@ -732,7 +775,7 @@
                 <div class="mt-12">
                     <button onclick="scrollToForm()" 
                             class="bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Start Your Installation
+                        Request Your Free Smart Cooler
                     </button>
                 </div>
             </div>
@@ -1065,8 +1108,12 @@
         let position = 0;
         let speed = 3; // pixels per frame
         let direction = -1; // -1 for left, 1 for right
+        let animationId = null;
+        let isCarouselView = true;
         
         function animateCarousel() {
+            if (!isCarouselView) return; // Stop animation if not in carousel view
+            
             const carousel = document.getElementById('logoCarousel');
             position += speed * direction;
             
@@ -1079,7 +1126,36 @@
             }
             
             carousel.style.transform = `translateX(${position}px)`;
-            requestAnimationFrame(animateCarousel);
+            animationId = requestAnimationFrame(animateCarousel);
+        }
+        
+        function toggleLogoView() {
+            const carouselContainer = document.getElementById('logoCarouselContainer');
+            const gridContainer = document.getElementById('logoGrid');
+            const toggleBtn = document.getElementById('toggleViewBtn');
+            
+            if (isCarouselView) {
+                // Switch to grid view
+                carouselContainer.style.display = 'none';
+                gridContainer.classList.remove('hidden');
+                toggleBtn.textContent = 'Show less';
+                isCarouselView = false;
+                
+                // Stop the animation
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                    animationId = null;
+                }
+            } else {
+                // Switch to carousel view
+                carouselContainer.style.display = 'block';
+                gridContainer.classList.add('hidden');
+                toggleBtn.textContent = 'See all logos';
+                isCarouselView = true;
+                
+                // Restart the animation
+                animateCarousel();
+            }
         }
         
         // Start the continuous animation
