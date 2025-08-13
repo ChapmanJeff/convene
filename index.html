@@ -896,6 +896,15 @@
         </div>
     </section>
 
+    <!-- Hidden form for Netlify detection -->
+    <form name="smart-cooler-leads" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="zip-code" />
+        <input name="bot-field" />
+    </form>
+
     <!-- Sticky Mobile CTA -->
     <div class="sticky-mobile-cta">
         <button onclick="scrollToForm()" 
