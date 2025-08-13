@@ -1000,7 +1000,6 @@
             submitBtn.textContent = 'Submitting...';
             
             // Submit to Netlify with proper error handling
-            const formData = new FormData(this);
             formData.append('form-name', 'smart-cooler-leads');
             
             console.log('Form data being sent:', Object.fromEntries(formData));
