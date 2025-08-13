@@ -662,10 +662,13 @@
                 </p>
                 
                 <!-- Customer Logos Carousel -->
-                <div class="mb-16 relative overflow-hidden">
-                    <div id="logo-carousel" class="flex gap-8 items-center justify-center transition-opacity duration-1000 ease-in-out">
+                <div class="mb-16 relative overflow-hidden h-24">
+                    <div id="logo-carousel" class="flex gap-12 items-center absolute whitespace-nowrap">
                         <!-- Logos will be dynamically populated -->
                     </div>
+                    <!-- Fade masks for smooth entry/exit -->
+                    <div class="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+                    <div class="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
@@ -1037,7 +1040,7 @@
             }
         });
 
-        // Logo Carousel
+        // Smooth Scrolling Logo Carousel
         const logoCarousel = {
             logos: [
                 'assets/images/customer_logos/1.png',
@@ -1065,50 +1068,74 @@
                 'assets/images/customer_logos/23.png',
                 'assets/images/customer_logos/24.png'
             ],
-            currentIndex: 0,
             container: null,
+            position: 0,
+            speed: 1.2, // pixels per frame
+            logoWidth: 180, // approximate width including gap
+            totalWidth: 0,
+            animationId: null,
 
             init() {
                 this.container = document.getElementById('logo-carousel');
                 this.render();
-                this.startAutoSlide();
+                this.startAnimation();
             },
 
             render() {
-                const visibleLogos = this.getVisibleLogos();
-                this.container.innerHTML = visibleLogos.map(logo => 
-                    `<img src="${logo}" alt="Customer logo" class="h-20 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-500 flex-shrink-0" loading="lazy">`
+                // Create two identical sets for seamless looping
+                const duplicatedLogos = [...this.logos, ...this.logos];
+                this.container.innerHTML = duplicatedLogos.map(logo => 
+                    `<img src="${logo}" alt="Customer logo" class="h-20 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0" loading="lazy" style="min-width: 120px;">`
                 ).join('');
+                
+                // Calculate total width for reset point (width of one complete set)
+                this.totalWidth = this.logos.length * this.logoWidth;
+                // Start at 0
+                this.position = 0;
             },
 
-            getVisibleLogos() {
-                const logosToShow = [];
-                for (let i = 0; i < 5; i++) {
-                    const index = (this.currentIndex + i) % this.logos.length;
-                    logosToShow.push(this.logos[index]);
+            animate() {
+                this.position -= this.speed;
+                
+                // Reset position seamlessly when we've moved one full set width
+                if (this.position <= -this.totalWidth) {
+                    this.position += this.totalWidth; // Add back one set width to reset seamlessly
                 }
-                return logosToShow;
+                
+                // Apply transform with hardware acceleration
+                this.container.style.transform = `translate3d(${this.position}px, 0, 0)`;
+                
+                // Continue animation
+                this.animationId = requestAnimationFrame(() => this.animate());
             },
 
-            next() {
-                this.container.style.opacity = '0.3';
-                setTimeout(() => {
-                    this.currentIndex = (this.currentIndex + 1) % this.logos.length;
-                    this.render();
-                    this.container.style.opacity = '1';
-                }, 500);
+            startAnimation() {
+                this.animate();
             },
 
-            startAutoSlide() {
-                setInterval(() => {
-                    this.next();
-                }, 3000); // Change every 3 seconds
+            stopAnimation() {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                }
             }
         };
 
         // Initialize carousel when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
             logoCarousel.init();
+        });
+
+        // Pause on hover for accessibility
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselContainer = document.querySelector('.mb-16.relative.overflow-hidden.h-24');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', () => {
+                    logoCarousel.speed = 0.6; // Slow down on hover
+                });
+                carouselContainer.addEventListener('mouseleave', () => {
+                    logoCarousel.speed = 1.2; // Resume normal speed
+                });
+            }
         });
     </script>
 </body>
