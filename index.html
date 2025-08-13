@@ -826,7 +826,6 @@
                 
                 <!-- Form -->
                 <form id="lead-form" name="smart-cooler-leads" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="bg-white p-8 lg:p-12 rounded-2xl shadow-lg text-left" autocomplete="on">
-                    <!-- Hidden bot field for spam protection -->
                     <p style="display: none;">
                         <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                     </p>
@@ -1000,13 +999,30 @@
             submitBtn.disabled = true;
             submitBtn.textContent = 'Submitting...';
             
-            // Submit to Netlify
+            // Submit to Netlify with proper error handling
+            const formData = new FormData(this);
+            formData.append('form-name', 'smart-cooler-leads');
+            
+            console.log('Form data being sent:', Object.fromEntries(formData));
+            
             fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(new FormData(this)).toString()
+                body: new URLSearchParams(formData).toString()
             })
-            .then(() => {
+            .then(response => {
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                return response.text();
+            })
+            .then(responseText => {
+                console.log('Response received:', responseText.substring(0, 200) + '...');
+                
                 // Replace form with success message
                 const form = document.getElementById('lead-form');
                 form.innerHTML = `
@@ -1020,7 +1036,9 @@
                     </div>
                 `;
             })
-            .catch(() => {
+            .catch(error => {
+                console.error('Form submission error:', error);
+                
                 // Re-enable button on error
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Request Your Free Smart Cooler';
