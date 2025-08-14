@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convene Market - Smart Vending Solutions | Replace Old Machines with AI-Powered Coolers</title>
+    <meta name="description" content="Replace clunky vending machines with sleek, AI-powered coolers at zero cost. Modern design, touchless checkout, always stocked. Request your free smart cooler today.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Convene Market - Smart Vending Solutions">
+    <meta property="og:description" content="Replace clunky vending machines with sleek, AI-powered coolers at zero cost. Modern design, touchless checkout, always stocked.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏪</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"></noscript>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            --cm-blue: #0A7BD9;
+            --cm-charcoal: #1A1A1A;
+            --cm-white: #FFFFFF;
+            --cm-gray: #F4F6F8;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            padding: 16px 24px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 500;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+        
+        .toast.show {
+            transform: translateX(0);
+        }
+        
+        .toast.success {
+            background-color: #10B981;
+        }
+        
+        .toast.error {
+            background-color: #EF4444;
+        }
+        
+        .exit-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .exit-modal.show {
+            display: flex;
+        }
+        
+        .sticky-mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 12px 16px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .sticky-mobile-cta.show {
+            transform: translateY(0);
+        }
+        
+        @media (min-width: 768px) {
+            .sticky-mobile-cta {
+                display: none;
+            }
+        }
+
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "Convene Market",
+                "url": "",
+                "description": "Smart vending solutions with AI-powered coolers"
+            },
+            {
+                "@type": "WebSite",
+                "name": "Convene Market",
+                "url": "",
+                "description": "Replace clunky vending machines with sleek, AI-powered coolers at zero cost."
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body class="font-inter text-[color:var(--cm-charcoal)] bg-[color:var(--cm-white)] scroll-smooth">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-[color:var(--cm-white)] border-b border-gray-200">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-poppins font-bold text-xl text-[color:var(--cm-blue)]">
+                        Convene Market
+                    </span>
+                </div>
+                <button onclick="scrollToForm()" 
+                        class="bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-4 py-2 rounded-full font-medium hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Get My $100 Bonus
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-[color:var(--cm-white)] py-12 lg:py-20">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                <!-- Hero Content -->
+                <div class="fade-in-up">
+                    <div class="mb-6">
+                        <div class="font-poppins font-bold text-3xl text-[color:var(--cm-blue)] mb-4">
+                            Convene Market
+                        </div>
+                        <div class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold inline-block">
+                            💰 EARN $100 REFERRAL BONUS
+                        </div>
+                    </div>
+                    <h1 class="font-poppins font-bold text-4xl lg:text-6xl text-[color:var(--cm-charcoal)] mb-6 leading-tight">
+                        Get Your <span id="rotating-text" class="text-[color:var(--cm-blue)]">Workplace</span><br>
+                        a Free AI Smart Vending Machine<br>
+                        <span class="text-green-600 text-3xl lg:text-4xl">and Earn $100</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed">
+                        And this isn't just snacks — it's tailored to you: headphones, shaker bottles, toiletries, Costco meal kits, and more, all chosen for your community.
+                    </p>
+                    <button onclick="scrollToForm()" 
+                            class="bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Get My $100 Referral Bonus
+                    </button>
+                </div>
+                
+                <!-- Hero Visual -->
+                <div class="mt-12 lg:mt-0 fade-in-up">
+                    <div class="grid grid-cols-2 gap-6 items-center">
+                        <div class="text-center">
+                            <img src="assets/images/old-vending-machines.jpg" 
+                                 alt="Traditional vending machines with limited options and outdated technology" 
+                                 class="w-full rounded-lg shadow-md"
+                                 loading="lazy"
+                                 decoding="async">
+                            <p class="text-sm text-gray-500 mt-2">Before</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="assets/images/convene-coolers.png" 
+                                 alt="Sleek Convene smart coolers with modern design and premium products" 
+                                 class="w-full rounded-lg shadow-md"
+                                 loading="lazy"
+                                 decoding="async">
+                            <p class="text-sm text-[color:var(--cm-blue)] mt-2 font-semibold">After</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Cue -->
+        <div class="text-center mt-16">
+            <div class="animate-bounce">
+                <svg class="w-6 h-6 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="bg-gray-50 py-16 lg:py-24">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center fade-in-up">
+                <h2 class="font-poppins font-bold text-3xl lg:text-5xl text-[color:var(--cm-charcoal)] mb-6">
+                    How to Earn Your $100 Bonus
+                </h2>
+                <p class="text-xl text-gray-600 mb-16">
+                    It's simple! Just connect us with your facility manager and we'll handle the rest.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center fade-in-up">
+                        <div class="bg-[color:var(--cm-blue)] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            1
+                        </div>
+                        <h3 class="font-poppins font-semibold text-xl text-[color:var(--cm-charcoal)] mb-4">
+                            Submit Your Info
+                        </h3>
+                        <p class="text-gray-600">
+                            Fill out the form with your details and your facility manager's contact information. Takes 2 minutes!
+                        </p>
+                    </div>
+                    
+                    <div class="text-center fade-in-up">
+                        <div class="bg-[color:var(--cm-blue)] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            2
+                        </div>
+                        <h3 class="font-poppins font-semibold text-xl text-[color:var(--cm-charcoal)] mb-4">
+                            We Handle Everything
+                        </h3>
+                        <p class="text-gray-600">
+                            Our team reaches out to your facility manager, explains the free upgrade, and schedules installation.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center fade-in-up">
+                        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            💰
+                        </div>
+                        <h3 class="font-poppins font-semibold text-xl text-[color:var(--cm-charcoal)] mb-4">
+                            Get Your $100
+                        </h3>
+                        <p class="text-gray-600">
+                            Once the smart cooler is successfully installed, you receive your $100 referral bonus!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learn More Bridge Section -->
+    <section class="bg-blue-50 py-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="bg-[color:var(--cm-blue)] text-white px-3 py-1 rounded-full text-sm font-medium">
+                        💡 Pro Tip
+                    </div>
+                </div>
+                <h3 class="font-poppins font-semibold text-2xl text-[color:var(--cm-charcoal)] mb-4">
+                    Want to help convince your facility manager?
+                </h3>
+                <p class="text-lg text-gray-600 mb-6">
+                    Learn more about the smart coolers below so you can share the amazing benefits with your team! The more they understand the value, the easier your referral will be.
+                </p>
+                <div class="flex items-center justify-center">
+                    <svg class="w-6 h-6 text-[color:var(--cm-blue)] animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="bg-[color:var(--cm-gray)] py-16 lg:py-24">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-6xl mx-auto fade-in-up">
+                <div class="text-center mb-16">
+                    <h2 class="font-poppins font-bold text-3xl lg:text-5xl text-[color:var(--cm-charcoal)] mb-6">
+                        A Week in the Life of Outdated Vending
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Your team's daily run-ins with broken, empty, and unreliable machines aren't just annoying — they're costing you time, focus, and morale.
+                    </p>
+                    
+                    <div class="flex justify-center my-8">
+                        <div class="w-16 h-px bg-gray-400"></div>
+                    </div>
+                </div>
+                
+                <!-- Story Timeline -->
+                <div class="space-y-8">
+                    <!-- Monday -->
+                    <div class="grid lg:grid-cols-2 gap-8 items-center bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div class="p-8 lg:p-12">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                    Monday
+                                </div>
+                                <span class="text-2xl">😫</span>
+                            </div>
+                            <h3 class="font-poppins font-bold text-2xl text-[color:var(--cm-charcoal)] mb-6">
+                                "The machine ate my money… again."
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <p class="text-gray-700">$2 gone → No snack → 15 minutes wasted chasing a refund</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <p class="text-gray-700">Afternoon momentum stalls as frustration spreads</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <p class="text-gray-700">Another complaint to facilities → More time lost, no fix</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-center mt-6">
+                                <div class="w-8 h-px bg-gray-300"></div>
+                            </div>
+                        </div>
+                        <div class="lg:h-80">
+                            <img src="assets/images/out-of-order.png" 
+                                 alt="Vending machine with out of order sign showing common breakdown issues" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                    </div>
+                    
+                    <!-- Wednesday -->
+                    <div class="grid lg:grid-cols-2 gap-8 items-center bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div class="lg:h-80 order-2 lg:order-1">
+                            <img src="assets/images/almost-empty.png" 
+                                 alt="Nearly empty vending machine with limited selection and poor stocking" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                        <div class="p-8 lg:p-12 order-1 lg:order-2">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                    Wednesday
+                                </div>
+                                <span class="text-2xl">😞</span>
+                            </div>
+                            <h3 class="font-poppins font-bold text-2xl text-[color:var(--cm-charcoal)] mb-6">
+                                "Everything I want is sold out."
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <p class="text-gray-700">Popular items gone since Monday → No restock until next week</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <p class="text-gray-700">Employees leave the building for snacks → 20+ minutes of productivity gone</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <p class="text-gray-700">Morale takes a hit → "This place doesn't care about us"</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-center mt-6">
+                                <div class="w-8 h-px bg-gray-300"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Friday -->
+                    <div class="grid lg:grid-cols-2 gap-8 items-center bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div class="p-8 lg:p-12">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                    Friday
+                                </div>
+                                <span class="text-2xl">🤷‍♀️</span>
+                            </div>
+                            <h3 class="font-poppins font-bold text-2xl text-[color:var(--cm-charcoal)] mb-6">
+                                "I just stopped trying."
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <p class="text-gray-700">Staff stop using the machine altogether</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <p class="text-gray-700">20-minute round trips to the store replace quick breaks</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <p class="text-gray-700">What was supposed to be an amenity is now a liability</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:h-80">
+                            <img src="assets/images/frustrated-vending.png" 
+                                 alt="Person frustrated with broken vending machine showing user abandonment" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transformation Hook -->
+                <div class="text-center mt-12">
+                    <div class="max-w-2xl mx-auto">
+                        <div class="bg-red-50 border border-red-200 rounded-2xl p-6 lg:p-8 mb-6">
+                            <h3 class="font-poppins font-bold text-2xl lg:text-3xl text-red-800 mb-4">
+                                The result?
+                            </h3>
+                            <p class="text-xl text-red-700 mb-4 leading-relaxed">
+                                Wasted time. Lower morale. Lost productivity.
+                            </p>
+                            <div class="flex items-center justify-center gap-4 mb-4">
+                                <div class="w-12 h-1 bg-red-300 rounded"></div>
+                                <span class="text-2xl">😔</span>
+                                <div class="w-12 h-1 bg-red-300 rounded"></div>
+                            </div>
+                            <p class="text-lg text-[color:var(--cm-blue)] font-semibold">
+                                The good news: It doesn't have to be this way.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-r from-[color:var(--cm-blue)] to-blue-600 text-white rounded-2xl p-8 lg:p-12">
+                        <h3 class="font-poppins font-bold text-2xl lg:text-3xl">
+                            Here's how we flip this story completely
+                        </h3>
+                    </div>
+                    <div class="mt-6 animate-bounce">
+                        <svg class="w-8 h-8 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="bg-[color:var(--cm-white)] py-16 lg:py-24">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-6xl mx-auto fade-in-up">
+                <div class="text-center mb-16">
+                    <h2 class="font-poppins font-bold text-3xl lg:text-5xl text-[color:var(--cm-charcoal)] mb-6">
+                        Meet the Smart TV of Vending
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                        See how our AI-powered smart coolers transform the vending experience with cutting-edge technology and user-friendly design.
+                    </p>
+                    
+                    <!-- Evolution Story -->
+                    <div class="bg-gray-50 rounded-3xl p-8 lg:p-12 mb-16">
+                        <h3 class="font-poppins font-semibold text-2xl text-[color:var(--cm-charcoal)] mb-8">
+                            From Clunky to Cutting-Edge: The New Standard in Workplace Amenities
+                        </h3>
+                        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                            <div class="text-center">
+                                <img src="assets/images/old-tv-old-vending.png" 
+                                     alt="Traditional sales approach with old CRT TV and outdated vending machine" 
+                                     class="w-full max-w-md mx-auto rounded-xl shadow-lg mb-4"
+                                     loading="lazy"
+                                     decoding="async">
+                                <div class="bg-red-100 text-red-800 px-4 py-2 rounded-full inline-block font-semibold">
+                                    Yesterday's Technology
+                                </div>
+                                <p class="text-gray-600 mt-3 text-sm">
+                                    Bulky displays, limited options, constant maintenance
+                                </p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <img src="assets/images/new-tv-new-vending.png" 
+                                     alt="Modern sales approach with smart 4K display and AI-powered smart cooler" 
+                                     class="w-full max-w-md mx-auto rounded-xl shadow-lg mb-4"
+                                     loading="lazy"
+                                     decoding="async">
+                                <div class="bg-blue-100 text-[color:var(--cm-blue)] px-4 py-2 rounded-full inline-block font-semibold">
+                                    Today's Innovation
+                                </div>
+                                <p class="text-gray-600 mt-3 text-sm">
+                                    Modern design, endless variety, zero headaches
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-8">
+                            <p class="text-xl text-gray-700 max-w-2xl mx-auto mb-6">
+                                You wouldn't put a bulky old TV in your office — so why keep an equally outdated vending machine?
+                            </p>
+                            <div class="flex items-center justify-center gap-4">
+                                <div class="w-8 h-1 bg-gray-300 rounded"></div>
+                                <span class="text-2xl">⚡</span>
+                                <div class="w-8 h-1 bg-[color:var(--cm-blue)] rounded"></div>
+                            </div>
+                            <p class="text-[color:var(--cm-blue)] font-semibold mt-2">
+                                Upgrade your workplace — without lifting a finger
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Demo Video -->
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
+                            <video 
+                                class="w-full h-auto" 
+                                controls 
+                                preload="metadata">
+                                <source src="assets/videos/convene-market-demo.mp4" type="video/mp4">
+                                <p class="text-white p-8">Your browser doesn't support video playback. 
+                                   <a href="assets/videos/convene-market-demo.mp4" class="text-blue-400 underline">Download the video</a> to watch it.
+                                </p>
+                            </video>
+                        </div>
+                        <p class="text-center text-gray-600 mt-4 font-medium">
+                            ▶ Watch our smart coolers in action
+                        </p>
+                    </div>
+                    
+                    <!-- Features List -->
+                    <div class="order-1 lg:order-2">
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl">✨</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-poppins font-semibold text-xl text-[color:var(--cm-charcoal)] mb-2">
+                                        Brand New State-of-the-Art Machines
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Premium quality manufacturing with reliable components and built-in video displays. No more money-eating breakdowns or constant maintenance calls.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl">📱</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-poppins font-semibold text-xl text-[color:var(--cm-charcoal)] mb-2">
+                                        QR Code Checkout
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Scan the QR code with your phone and pay instantly with Apple Pay, Google Pay, or credit card. No broken card readers ever, and your money never gets eaten again.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl">🛒</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-poppins font-semibold text-xl text-[color:var(--cm-charcoal)] mb-2">
+                                        Multiple Items, One Transaction
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Take as many items as you want in a single purchase. Perfect for grabbing snacks for the whole team or stocking up for the week.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl">📦</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-poppins font-semibold text-xl text-[color:var(--cm-charcoal)] mb-2">
+                                        Always Stocked
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Inventory is tracked remotely in real-time. When items run low, we quickly restock exactly what your team wants most.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl">✨</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-poppins font-semibold text-xl text-[color:var(--cm-charcoal)] mb-2">
+                                        Sleek, Modern Design
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Premium aesthetic that fits any environment, from corporate offices to upscale fitness centers.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl">🍕</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-poppins font-semibold text-xl text-[color:var(--cm-charcoal)] mb-2">
+                                        Beyond Basic Snacks
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Premium drinks, fresh food, healthy options, and even tech accessories. Whatever your team needs.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl">📊</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-poppins font-semibold text-xl text-[color:var(--cm-charcoal)] mb-2">
+                                        Smart Analytics
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Built-in intelligence tracks preferences and optimizes inventory for maximum satisfaction.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-16">
+                    <button onclick="scrollToForm()" 
+                            class="bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Get My $100 Bonus
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Section -->
+    <section class="bg-[color:var(--cm-gray)] py-16 lg:py-24">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center fade-in-up">
+                <h2 class="font-poppins font-bold text-3xl lg:text-5xl text-[color:var(--cm-charcoal)] mb-12">
+                    A Premium Amenity. Zero Work.
+                </h2>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-10 rounded-2xl shadow-sm text-center">
+                        <div class="bg-[color:var(--cm-blue)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-2xl">😊</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-xl mb-4">Boost Satisfaction</h3>
+                        <p class="text-gray-700">Tailored options employees and customers actually want.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-2xl shadow-sm text-center">
+                        <div class="bg-[color:var(--cm-blue)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-2xl">🙌</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-xl mb-4">Hands-Off</h3>
+                        <p class="text-gray-700">We handle install, restocking, cleaning, and maintenance — with no contracts, no commitments.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-2xl shadow-sm text-center">
+                        <div class="bg-[color:var(--cm-blue)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-2xl">🚀</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-xl mb-4">Modern & Memorable</h3>
+                        <p class="text-gray-700">A tech-forward experience that upgrades your space.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="bg-[color:var(--cm-white)] py-16 lg:py-24">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center fade-in-up">
+                <div class="bg-gray-50 p-12 rounded-2xl shadow-sm">
+                    <blockquote class="text-2xl lg:text-3xl text-gray-800 italic mb-8">
+                        "Our employees love it. It looks great, it's always stocked, and we don't lift a finger."
+                    </blockquote>
+                    <cite class="text-lg text-[color:var(--cm-blue)] font-semibold not-italic">
+                        — You, next month 😉
+                    </cite>
+                </div>
+                <div class="mt-12">
+                    <button onclick="scrollToForm()" 
+                            class="bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Get My $100 Bonus
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Real Installations Section -->
+    <section class="bg-[color:var(--cm-white)] py-16 lg:py-24">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center fade-in-up">
+                <h2 class="font-poppins font-bold text-3xl lg:text-5xl text-[color:var(--cm-charcoal)] mb-6">
+                    Join Employees at Leading Companies Who've Already Upgraded
+                </h2>
+                <p class="text-xl text-gray-600 mb-12">
+                    Employees at these companies have already earned referral bonuses by upgrading their workplace vending.
+                </p>
+                
+                <!-- Customer Logos -->
+                <div class="mb-16">
+                    <!-- Carousel View -->
+                    <div id="logoCarouselContainer" class="overflow-hidden">
+                        <div id="logoCarousel" class="flex gap-8 transition-transform duration-1000 ease-linear">
+                            <img src="assets/images/customer_logos/1.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/2.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/3.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/4.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/5.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/6.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/7.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/8.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/9.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/10.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/11.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/12.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/13.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/14.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/15.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/16.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/17.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/18.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/19.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/20.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/21.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/22.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/23.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                            <img src="assets/images/customer_logos/24.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300 flex-shrink-0">
+                        </div>
+                    </div>
+
+                    <!-- Grid View (Hidden by default) -->
+                    <div id="logoGrid" class="hidden grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 items-center justify-items-center">
+                        <img src="assets/images/customer_logos/1.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/2.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/3.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/4.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/5.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/6.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/7.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/8.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/9.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/10.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/11.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/12.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/13.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/14.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/15.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/16.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/17.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/18.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/19.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/20.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/21.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/22.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/23.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                        <img src="assets/images/customer_logos/24.png" alt="Customer logo" class="h-16 w-auto object-contain filter grayscale opacity-60 hover:filter-none hover:opacity-100 transition-all duration-300">
+                    </div>
+
+                    <!-- Toggle Button -->
+                    <div class="text-center mt-6">
+                        <button id="toggleViewBtn" onclick="toggleLogoView()" class="text-gray-400 hover:text-gray-600 text-xs font-light underline underline-offset-2 transition-colors duration-200">
+                            See all logos
+                        </button>
+                    </div>
+                </div>
+                
+                <p class="text-xl text-gray-600 text-center mb-12">
+                    From corporate offices to sports clubs, Convene will transform your space
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <img src="assets/images/Office Pantry.webp" 
+                             alt="Convene smart coolers integrated seamlessly in modern office pantry with FUEL UP branding" 
+                             class="w-full h-64 object-cover"
+                             loading="lazy"
+                             decoding="async">
+                        <div class="p-6">
+                            <h3 class="font-poppins font-semibold text-lg mb-2">Corporate Offices</h3>
+                            <p class="text-gray-600">Seamlessly integrated into modern office environments</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <img src="assets/images/Sport Club.webp" 
+                             alt="Premium smart coolers installation at Racket Club with modern branding and professional setup" 
+                             class="w-full h-64 object-cover"
+                             loading="lazy"
+                             decoding="async">
+                        <div class="p-6">
+                            <h3 class="font-poppins font-semibold text-lg mb-2">Sports & Fitness</h3>
+                            <p class="text-gray-600">Perfect hydration solutions for active lifestyles</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <img src="assets/images/Airport.webp" 
+                             alt="Smart vending machine at airport with premium product selection and digital display" 
+                             class="w-full h-64 object-cover"
+                             loading="lazy"
+                             decoding="async">
+                        <div class="p-6">
+                            <h3 class="font-poppins font-semibold text-lg mb-2">Transportation Hubs</h3>
+                            <p class="text-gray-600">Reliable service for travelers on the go</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12">
+                    <button onclick="scrollToForm()" 
+                            class="bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Get My $100 Bonus
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="bg-[color:var(--cm-gray)] py-16 lg:py-24">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center fade-in-up">
+                <h2 class="font-poppins font-bold text-3xl lg:text-5xl text-[color:var(--cm-charcoal)] mb-12">
+                    How It Works
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-10 rounded-2xl shadow-sm text-center">
+                        <div class="bg-[color:var(--cm-blue)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-2xl text-white font-bold">1</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-xl mb-4">Request your free placement.</h3>
+                    </div>
+                    <div class="bg-white p-10 rounded-2xl shadow-sm text-center">
+                        <div class="bg-[color:var(--cm-blue)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-2xl text-white font-bold">2</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-xl mb-4">We install & stock your smart cooler.</h3>
+                    </div>
+                    <div class="bg-white p-10 rounded-2xl shadow-sm text-center">
+                        <div class="bg-[color:var(--cm-blue)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-2xl text-white font-bold">3</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-xl mb-4">You enjoy a modern amenity — no cost, no work.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus Terms Section -->
+    <section class="bg-gray-100 py-16 lg:py-20">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-poppins font-bold text-3xl lg:text-4xl text-[color:var(--cm-charcoal)] mb-8 text-center">
+                    $100 Referral Bonus Terms
+                </h2>
+                
+                <div class="bg-white rounded-2xl shadow-sm p-8 lg:p-12">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 font-semibold">✓</span>
+                            </div>
+                            <p class="text-gray-700">
+                                <strong>Bonus Payment:</strong> $100 paid within 30 days of successful smart cooler installation
+                            </p>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 font-semibold">✓</span>
+                            </div>
+                            <p class="text-gray-700">
+                                <strong>Eligibility:</strong> Must be an employee of the referred company/location
+                            </p>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 font-semibold">✓</span>
+                            </div>
+                            <p class="text-gray-700">
+                                <strong>Requirements:</strong> Machine must be successfully installed and operational for 30 days
+                            </p>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 font-semibold">✓</span>
+                            </div>
+                            <p class="text-gray-700">
+                                <strong>Payment Method:</strong> Venmo, PayPal, Zelle, or check - your choice!
+                            </p>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 font-semibold">✓</span>
+                            </div>
+                            <p class="text-gray-700">
+                                <strong>One Per Location:</strong> One referral bonus per company location/facility
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+                        <p class="text-sm text-gray-600 text-center">
+                            Questions about the referral program? Email us at <a href="mailto:referrals@convenemarket.com" class="text-[color:var(--cm-blue)] underline">referrals@convenemarket.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta-form" class="bg-[color:var(--cm-blue)] py-16 lg:py-24">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center fade-in-up">
+                <h2 class="font-poppins font-bold text-3xl lg:text-5xl text-[color:var(--cm-white)] mb-6">
+                    Ready to Earn Your $100 Bonus?
+                </h2>
+                <p class="text-xl text-blue-100 mb-12">
+                    Just connect us with your facility manager. We'll handle the rest and you get paid when it's installed!
+                </p>
+                
+                <!-- Form -->
+                <form id="referral-form" name="referral-bonus-leads" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="bg-white p-8 lg:p-12 rounded-2xl shadow-lg text-left" autocomplete="on">
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="employee-name" class="block text-sm font-medium text-gray-700 mb-2">Your Name *</label>
+                            <input type="text" 
+                                   id="employee-name" 
+                                   name="employee-name" 
+                                   required 
+                                   autocomplete="name"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                   aria-describedby="employee-name-error">
+                            <div id="employee-name-error" class="text-red-500 text-sm mt-1 hidden" role="alert"></div>
+                        </div>
+                        <div>
+                            <label for="employee-email" class="block text-sm font-medium text-gray-700 mb-2">Your Email *</label>
+                            <input type="email" 
+                                   id="employee-email" 
+                                   name="employee-email" 
+                                   required 
+                                   autocomplete="email"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                   aria-describedby="employee-email-error">
+                            <div id="employee-email-error" class="text-red-500 text-sm mt-1 hidden" role="alert"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="employee-phone" class="block text-sm font-medium text-gray-700 mb-2">Your Phone *</label>
+                            <input type="tel" 
+                                   id="employee-phone" 
+                                   name="employee-phone" 
+                                   required 
+                                   autocomplete="tel"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                   aria-describedby="employee-phone-error">
+                            <div id="employee-phone-error" class="text-red-500 text-sm mt-1 hidden" role="alert"></div>
+                        </div>
+                        <div>
+                            <label for="company-name" class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                            <input type="text" 
+                                   id="company-name" 
+                                   name="company-name" 
+                                   required 
+                                   autocomplete="organization"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                   aria-describedby="company-name-error">
+                            <div id="company-name-error" class="text-red-500 text-sm mt-1 hidden" role="alert"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="manager-name" class="block text-sm font-medium text-gray-700 mb-2">Facility Manager Name</label>
+                            <input type="text" 
+                                   id="manager-name" 
+                                   name="manager-name" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                        </div>
+                        <div>
+                            <label for="manager-contact" class="block text-sm font-medium text-gray-700 mb-2">Manager Email or Phone</label>
+                            <input type="text" 
+                                   id="manager-contact" 
+                                   name="manager-contact" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="why-upgrade" class="block text-sm font-medium text-gray-700 mb-2">Why would this benefit your workplace?</label>
+                        <textarea id="why-upgrade" 
+                                  name="why-upgrade" 
+                                  rows="3" 
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                  placeholder="e.g., Our vending machines are always broken, limited healthy options, employees complain about the selection..."></textarea>
+                    </div>
+                    
+                    <button type="submit" 
+                            id="submit-btn"
+                            class="w-full bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                        Get My $100 Bonus
+                    </button>
+                    
+                    <p class="text-sm text-gray-500 text-center mt-4">
+                        We'll reach out within 24 hours to connect with your facility manager. You get paid $100 when the machine is successfully installed.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden form for Netlify detection -->
+    <form name="referral-bonus-leads" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="employee-name" />
+        <input type="email" name="employee-email" />
+        <input type="tel" name="employee-phone" />
+        <input type="text" name="company-name" />
+        <input type="text" name="manager-name" />
+        <input type="text" name="manager-contact" />
+        <textarea name="why-upgrade"></textarea>
+        <input name="bot-field" />
+    </form>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta">
+        <button onclick="scrollToForm()" 
+                class="w-full bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            Get My $100 Bonus
+        </button>
+    </div>
+
+    <!-- Exit Intent Modal -->
+    <div id="exit-modal" class="exit-modal">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-md mx-4">
+            <h3 class="font-poppins font-bold text-2xl text-[color:var(--cm-charcoal)] mb-4">
+                Wait! Before You Go...
+            </h3>
+            <p class="text-gray-600 mb-6">
+                Get a free consultation call to see if a smart cooler is right for your space.
+            </p>
+            <div class="flex gap-4">
+                <button onclick="closeExitModal()" 
+                        class="flex-1 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                    No Thanks
+                </button>
+                <button onclick="scrollToForm(); closeExitModal();" 
+                        class="flex-1 bg-[color:var(--cm-blue)] text-[color:var(--cm-white)] px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Get Free Call
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        // Smooth scrolling to form
+        function scrollToForm() {
+            document.getElementById('cta-form').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Form validation and submission
+        document.getElementById('referral-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Reset errors
+            const errorElements = document.querySelectorAll('[id$="-error"]');
+            errorElements.forEach(el => {
+                el.textContent = '';
+                el.classList.add('hidden');
+            });
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Validation
+            let isValid = true;
+            
+            if (!data['employee-name']?.trim()) {
+                showError('employee-name-error', 'Your name is required');
+                isValid = false;
+            }
+            
+            if (!data['employee-email']?.trim()) {
+                showError('employee-email-error', 'Your email is required');
+                isValid = false;
+            } else if (!isValidEmail(data['employee-email'])) {
+                showError('employee-email-error', 'Please enter a valid email');
+                isValid = false;
+            }
+            
+            if (!data['employee-phone']?.trim()) {
+                showError('employee-phone-error', 'Your phone is required');
+                isValid = false;
+            } else if (!isValidPhone(data['employee-phone'])) {
+                showError('employee-phone-error', 'Please enter a valid US phone number');
+                isValid = false;
+            }
+            
+            if (!data['company-name']?.trim()) {
+                showError('company-name-error', 'Company name is required');
+                isValid = false;
+            }
+            
+            if (!isValid) return;
+            
+            // Disable submit button
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            // Submit to Netlify with proper error handling
+            formData.append('form-name', 'referral-bonus-leads');
+            
+            console.log('Form data being sent:', Object.fromEntries(formData));
+            
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(response => {
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                return response.text();
+            })
+            .then(responseText => {
+                console.log('Response received:', responseText.substring(0, 200) + '...');
+                
+                // Replace form with success message
+                const form = document.getElementById('referral-form');
+                form.innerHTML = `
+                    <div class="text-center py-8">
+                        <h3 class="font-poppins font-bold text-3xl text-[color:var(--cm-charcoal)] mb-6">
+                            🎉 Your $100 Bonus is On Its Way!
+                        </h3>
+                        <p class="text-xl text-gray-600 leading-relaxed">
+                            Thanks for the referral! Our team will contact your facility manager within 24 hours. You'll receive your $100 bonus once the smart cooler is installed!
+                        </p>
+                    </div>
+                `;
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                
+                // Re-enable button on error
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Get My $100 Bonus';
+                alert('There was an error submitting your form. Please try again.');
+            });
+        });
+
+        function showError(elementId, message) {
+            const errorEl = document.getElementById(elementId);
+            errorEl.textContent = message;
+            errorEl.classList.remove('hidden');
+        }
+
+        function isValidEmail(email) {
+            // More comprehensive email validation
+            const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+            return emailRegex.test(email) && email.length <= 254;
+        }
+
+        function isValidPhone(phone) {
+            // Remove all non-digit characters
+            const cleaned = phone.replace(/\D/g, '');
+            // Check if it's 10 or 11 digits (with or without country code)
+            if (cleaned.length === 10) {
+                // US phone number without country code
+                return /^[2-9]\d{2}[2-9]\d{6}$/.test(cleaned);
+            } else if (cleaned.length === 11 && cleaned.startsWith('1')) {
+                // US phone number with country code
+                const withoutCountryCode = cleaned.slice(1);
+                return /^[2-9]\d{2}[2-9]\d{6}$/.test(withoutCountryCode);
+            }
+            return false;
+        }
+
+        function isValidZipCode(zip) {
+            // US ZIP code validation (5 digits or 5+4 format)
+            return /^[0-9]{5}(-[0-9]{4})?$/.test(zip);
+        }
+
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = `toast ${type}`;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -10% 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Sticky mobile CTA
+        let lastScrollTop = 0;
+        const mobileCTA = document.querySelector('.sticky-mobile-cta');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            
+            // Show CTA when scrolling down and not at bottom
+            if (scrollTop > lastScrollTop && scrollTop > 200 && (scrollTop + windowHeight) < documentHeight - 100) {
+                mobileCTA.classList.add('show');
+            } else {
+                mobileCTA.classList.remove('show');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Exit intent modal
+        let exitModalShown = false;
+
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY <= 0 && !exitModalShown && window.innerWidth > 768) {
+                showExitModal();
+            }
+        });
+
+        function showExitModal() {
+            if (!exitModalShown) {
+                document.getElementById('exit-modal').classList.add('show');
+                exitModalShown = true;
+            }
+        }
+
+        function closeExitModal() {
+            document.getElementById('exit-modal').classList.remove('show');
+        }
+
+        // Close modal on background click
+        document.getElementById('exit-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'exit-modal') {
+                closeExitModal();
+            }
+        });
+
+        // Keyboard navigation for modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && document.getElementById('exit-modal').classList.contains('show')) {
+                closeExitModal();
+            }
+        });
+
+        // Continuous Logo Carousel with Reverse
+        let position = 0;
+        let speed = 3; // pixels per frame
+        let direction = -1; // -1 for left, 1 for right
+        let animationId = null;
+        let isCarouselView = true;
+        
+        function animateCarousel() {
+            if (!isCarouselView) return; // Stop animation if not in carousel view
+            
+            const carousel = document.getElementById('logoCarousel');
+            position += speed * direction;
+            
+            // Reverse direction when we can still see the last 5 logos
+            // Go further to show more logos before reversing
+            if (position <= -3600) { // Reverse when last 5 logos are still visible
+                direction = 1;
+            } else if (position >= 200) { // Go past the beginning to show first logos clearly
+                direction = -1;
+            }
+            
+            carousel.style.transform = `translateX(${position}px)`;
+            animationId = requestAnimationFrame(animateCarousel);
+        }
+        
+        function toggleLogoView() {
+            const carouselContainer = document.getElementById('logoCarouselContainer');
+            const gridContainer = document.getElementById('logoGrid');
+            const toggleBtn = document.getElementById('toggleViewBtn');
+            
+            if (isCarouselView) {
+                // Switch to grid view
+                carouselContainer.style.display = 'none';
+                gridContainer.classList.remove('hidden');
+                toggleBtn.textContent = 'Show less';
+                isCarouselView = false;
+                
+                // Stop the animation
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                    animationId = null;
+                }
+            } else {
+                // Switch to carousel view
+                carouselContainer.style.display = 'block';
+                gridContainer.classList.add('hidden');
+                toggleBtn.textContent = 'See all logos';
+                isCarouselView = true;
+                
+                // Restart the animation
+                animateCarousel();
+            }
+        }
+        
+        // Start the continuous animation
+        document.addEventListener('DOMContentLoaded', () => {
+            animateCarousel();
+            startTextRotation();
+        });
+
+        // Rotating text animation
+        function startTextRotation() {
+            const rotatingElement = document.getElementById('rotating-text');
+            const words = ['Workplace', 'Gym', 'Apartment Complex', 'Office Building', 'School', 'Hotel', 'Community Center'];
+            let currentIndex = 0;
+            
+            function rotateText() {
+                // Fade out
+                rotatingElement.style.opacity = '0';
+                
+                setTimeout(() => {
+                    // Change text
+                    currentIndex = (currentIndex + 1) % words.length;
+                    rotatingElement.textContent = words[currentIndex];
+                    
+                    // Fade in
+                    rotatingElement.style.opacity = '1';
+                }, 300);
+            }
+            
+            // Add smooth transition
+            rotatingElement.style.transition = 'opacity 0.3s ease-in-out';
+            
+            // Rotate every 3 seconds
+            setInterval(rotateText, 3000);
+        }
+
+    </script>
+</body>
+</html>
