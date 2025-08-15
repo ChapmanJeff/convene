@@ -186,14 +186,17 @@
         <div class="container mx-auto px-4 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
                 <!-- Hero Content -->
-                <div class="fade-in-up">
+                <div class="fade-in-up text-center lg:text-left">
                     <div class="mb-6">
                         <div class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold inline-block">
                             💰 EARN $100 REFERRAL BONUS
                         </div>
                     </div>
                     <h1 class="font-poppins font-bold text-4xl lg:text-6xl text-[color:var(--cm-charcoal)] mb-6 leading-tight">
-                        Get Your <span id="rotating-text" class="text-[color:var(--cm-blue)]">Workplace</span><br>
+                        Get Your<br>
+                        <div class="h-12 lg:h-16 flex items-center justify-center lg:justify-start">
+                            <span id="rotating-text" class="text-[color:var(--cm-blue)] text-3xl lg:text-6xl whitespace-nowrap">Workplace</span>
+                        </div>
                         a Free AI Smart Vending Machine<br>
                         <span class="text-green-600 text-3xl lg:text-4xl">and Earn $100</span>
                     </h1>
@@ -1232,9 +1235,19 @@
     <script>
         // Smooth scrolling to form
         function scrollToForm() {
-            document.getElementById('cta-form').scrollIntoView({
-                behavior: 'smooth'
-            });
+            // Small delay to ensure page layout is settled
+            setTimeout(() => {
+                const formElement = document.getElementById('referral-form');
+                if (formElement) {
+                    const yOffset = -100; // Scroll 100px above the form
+                    const y = formElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    
+                    window.scrollTo({
+                        top: y,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100);
         }
 
         // Form validation and submission
